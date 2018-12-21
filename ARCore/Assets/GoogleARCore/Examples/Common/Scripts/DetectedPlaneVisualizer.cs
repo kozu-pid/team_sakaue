@@ -207,6 +207,7 @@ namespace GoogleARCore.Examples.Common
             m_Mesh.SetVertices(m_MeshVertices);
             m_Mesh.SetTriangles(m_MeshIndices, 0);
             m_Mesh.SetColors(m_MeshColors);
+
             GetComponent<MeshCollider>().sharedMesh = null;
             GetComponent<MeshCollider>().sharedMesh = m_Mesh;
         }
