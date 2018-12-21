@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class BombController : MonoBehaviour {
 
-    [SerializeField] GameObject BombParticle;
-    [SerializeField] GameObject fireParticle;
+    [SerializeField] GameObject[] BombParticle;
+    [SerializeField] GameObject[] fireParticle;
 
     [SerializeField] float DestroyInterval;
     [SerializeField] float FireGeneratetime;
+
+    [SerializeField] int BombParticleNumber;
+    [SerializeField] int FireParticleNumber;
 
     private GameObject particle;
 
@@ -20,7 +23,7 @@ public class BombController : MonoBehaviour {
     {
         GetComponent<Rigidbody>().isKinematic = true;
 
-        particle = Instantiate(BombParticle) as GameObject;
+        particle = Instantiate(BombParticle[BombParticleNumber]) as GameObject;
         Vector3 pos = transform.position;
         particle.transform.position = pos;
         StartCoroutine(FireGenerate());
@@ -36,7 +39,7 @@ public class BombController : MonoBehaviour {
 
     IEnumerator FireGenerate(){
         yield return new WaitForSeconds(FireGeneratetime);
-        GameObject fire = Instantiate(fireParticle) as GameObject;
+        GameObject fire = Instantiate(fireParticle[FireParticleNumber]) as GameObject;
         Vector3 pos = transform.position;
         fire.transform.position = pos;
         Destroy(particle);

@@ -215,11 +215,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 838a4022f786f47e5b6689d8dd3ccb9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BombParticle: {fileID: 158224, guid: 08af55dd04af6094389b71d80b600049, type: 2}
-  fireParticle: {fileID: 1973075987484898, guid: bccc7a794e75b2a44a4b0dac69160b7b,
-    type: 2}
+  BombParticle:
+  - {fileID: 140400, guid: f66e014454bdeb942944471c5e19da6c, type: 2}
+  - {fileID: 1025285306637258, guid: d8f0099df63275647a8bcf646df1ca00, type: 2}
+  fireParticle:
+  - {fileID: 1973075987484898, guid: bccc7a794e75b2a44a4b0dac69160b7b, type: 2}
+  - {fileID: 1901245927194888, guid: bb98861c48ad2024ca93498c7dd93a6c, type: 2}
+  - {fileID: 1972207730512856, guid: ea4fb55d0227e604386f44f905cfe7c0, type: 2}
+  - {fileID: 1478314613700728, guid: be6847dd39ab95f4daa2ed98e4f90564, type: 2}
   DestroyInterval: 1
   FireGeneratetime: 0.5
+  BombParticleNumber: 0
+  FireParticleNumber: 3
 --- !u!135 &135398398266070594
 SphereCollider:
   m_ObjectHideFlags: 1
