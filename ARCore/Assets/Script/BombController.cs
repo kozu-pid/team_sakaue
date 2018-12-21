@@ -16,7 +16,7 @@ public class BombController : MonoBehaviour {
         GetComponent<Rigidbody>().AddForce(dir, ForceMode.Force);
     }
 
-    private void OnCollision(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         GetComponent<Rigidbody>().isKinematic = true;
 
@@ -30,7 +30,7 @@ public class BombController : MonoBehaviour {
     IEnumerator ExecuteBomb()
     {
         yield return new WaitForSeconds(DestroyInterval);
-        Destroy(gameObject);
+        Destroy(this.gameObject);
 
     }
 
